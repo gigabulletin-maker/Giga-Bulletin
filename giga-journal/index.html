@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>গিগা জার্নাল — Giga Journal</title>
+
+<!-- ==========================================================================
+     WHAT TO EDIT
+     - Top hero, black divider and bottom "Contribute" section: unchanged,
+       same code/design as the main page.
+     - Grey intro: body text + the three issue lines (ISSUES array below),
+       now shown as plain grey text (no card/box styling), with only the
+       middle word of the current issue's title ("রঙিন") animating
+       horizontally in a turquoise-blue tone. The first and last words
+       ("জড়", "মুক্তি") stay fully static and plain grey.
+     - Poster grid: the three journal cards (JOURNALS array below), each one
+       reusing the same ticker-poster template — just its own driveId, link,
+       coloured title words and ticker text.
+     ========================================================================== -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://lh3.googleusercontent.com/d/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@300;400;500;600;700;800&family=EB+Garamond:ital,wght@0,500;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="Style/style.css">
+<link rel="stylesheet" href="/Navigation/navigation.css">
+</head>
+<body>
+<nav aria-label="Giga main navigation" class="giga-nav" id="gigaNavigation">
+<a class="nav-logo" href="/" aria-label="Giga Bulletin home"><img src="https://lh3.googleusercontent.com/d/1wb2WC5Co9J8RjmLUKGZqTPhj4_fS9gX1=w200" alt="Giga Bulletin logo" width="46" height="46"></a>
+<button class="nav-arrow nav-prev" type="button" aria-label="Previous navigation items" title="Previous"><span>‹</span></button>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="gigaNavLinks" aria-label="Open navigation"><i></i><i></i><i></i></button>
+<button class="nav-backdrop" type="button" aria-label="Close navigation"></button>
+<div class="nav-links" id="gigaNavLinks" aria-label="Main menu"><div class="nav-drawer-head"><button class="nav-drawer-close" type="button" aria-label="Close navigation">×</button></div>
+<a href="/">Home</a>
+<a href="/giga-bulletin/">Giga Bulletin</a>
+<a href="/giga-journal/">Giga Journal</a>
+<a href="/giga-flow/">Giga Flow</a>
+<a href="/giga-translation/">Giga Translation</a>
+<a href="/giga-poetry-ground/">Giga Poetry Ground</a>
+<a href="/magazine-and-books/">Magazine and Books</a>
+<a href="/giga-canvas/">Giga Canvas</a>
+<a href="/contribute-to-giga/">Contribute to Giga</a>
+<a href="/feedback-for-giga/">Feedback for Giga</a>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/cookie-policy/">Cookie Policy</a>
+<a href="/contact-us/">Contact Us</a>
+<a href="/faq/">FAQ</a>
+</div>
+<button class="nav-arrow nav-next" type="button" aria-label="Next navigation items" title="Next"><span>›</span></button>
+</nav>
+
+<!-- 1. HERO -->
+<header class="hero">
+  <div class="bg-pan" data-id="11oiSAP55lB_35yeI3hTD2JL1q8QiSO4M" data-w="2500"></div>
+  <div class="hero-scrim"></div>
+  <div class="ring"></div>
+  <div class="embers" id="embers"></div>
+  <div class="hero-inner">
+    <h1 style="margin:0;font-size:0"><span class="giga" data-t="GIGA">GIGA</span></h1>
+    <div class="jr"><i></i><span>JOURNAL</span><i></i></div>
+    <p class="bn">গিগা জার্নাল</p>
+  </div>
+</header>
+
+<!-- 2. GREY INTRO -->
+<section class="intro">
+  <div class="intro-in">
+    <div class="intro-head">
+      <h2>⭕ গিগা—জার্নাল⭕</h2>
+      <p class="en">The Finest Scroll exhibition of Art-Literary Space</p>
+      <p class="bn2">দেখুন, পড়ুন শব্দ রঙের আবহে যত্ন নিন</p>
+    </div>
+    <p class="body">গিগা জার্নাল একটি ধারাবাহিক আর্ট এবং পোয়েট্রি প্ল্যার্টফর্ম, দৈনন্দিন হাঁপরের ছাই উড়ে আসে যেরকম, সেই আগুনের খোঁজ, কলকারখানার কালো দাঁতের ভেতর জ্বলন্ত অক্ষরসজ্জা, বুক থেকে খুঁটে তোলা আয়না, হরফগুলোর নিয়মিত সংযোজন ও সংগ্রহ...</p>
+    <div class="issues" id="issues"></div>
+  </div>
+</section>
+
+<!-- 3. BLACK SHORT DIVIDER -->
+<section class="divider"></section>
+
+<!-- 4. POSTER GRID -->
+<section class="wall"><div class="grid" id="grid"></div></section>
+
+<!-- 5. CONTRIBUTE -->
+<section class="contribute">
+  <a class="give" href="https://www.gigabulletin.in/contribute-to-giga" target="_blank" rel="noopener noreferrer" aria-label="Contribute to GIGA">
+    <span class="badge">
+      <svg class="orbit" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="orb" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+        <text><textPath href="#orb" textLength="500">CONTRIBUTE TO GIGA • CONTRIBUTE TO GIGA • </textPath></text>
+      </svg>
+      <span class="core"><b>↗</b></span>
+    </span>
+    <span class="give-t">Contribute to GIGA</span>
+  </a>
+</section>
+
+
+
+<script src="Script/script.js" defer></script>
+<script src="/Navigation/navigation.js" defer></script>
+</body>
+</html>
