@@ -541,3 +541,5 @@ html.giga-scrolling .bar * { animation-play-state: paused !important; }
 #rd .poem-section-number{display:grid;place-items:center;width:clamp(42px,8vw,52px);height:clamp(42px,8vw,52px);margin:26px auto 20px;border-radius:50%;border:1.5px solid #a72b37;background:radial-gradient(circle at 32% 24%,#fffdf8 0%,#f4d9d4 48%,#d3202a 100%);color:#6f1722;font:700 clamp(18px,4vw,22px)/1 'Noto Serif Bengali',serif;box-shadow:0 0 0 4px #d3202a12,0 4px 0 #a72b3726,0 8px 16px #4b20201c,inset 0 1px 0 #ffffffd9;position:relative}
 #rd .poem-section-number::after{content:"";position:absolute;inset:4px;border:1px solid #a72b3740;border-radius:50%;pointer-events:none}
 #rd .poem-section-number+.reader-paragraph{margin-top:0}
+/* Giga Flow only: keep the sticky Flow logo/title bar below shared navigation. */
+body:has(#gigaNavigation) .bar{top:var(--giga-nav-height,62px)}
