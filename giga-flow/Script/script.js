@@ -1801,3 +1801,5 @@ function bootGigaFlow(){
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",bootGigaFlow,{once:true});
 else bootGigaFlow();
 })();
+/* Measure the shared navigation height for the sticky Flow header. */
+(()=>{const nav=document.getElementById('gigaNavigation');if(!nav)return;const sync=()=>document.documentElement.style.setProperty('--giga-nav-height',nav.getBoundingClientRect().height+'px');sync();window.addEventListener('resize',sync,{passive:true});if('ResizeObserver'in window)new ResizeObserver(sync).observe(nav)})();
