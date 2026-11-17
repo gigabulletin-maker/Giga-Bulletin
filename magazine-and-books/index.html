@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>গিগা বুলেটিন - অন্যান্য বই</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;700;900&family=Galada&family=Tiro+Bangla&family=Anek+Bangla:wdth,wght@75..125,100..800&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="Style/style.css">
+<link rel="stylesheet" href="/Navigation/navigation.css">
+</head>
+
+<body>
+<nav aria-label="Giga main navigation" class="giga-nav" id="gigaNavigation">
+<a class="nav-logo" href="/" aria-label="Giga Bulletin home"><img src="https://lh3.googleusercontent.com/d/1wb2WC5Co9J8RjmLUKGZqTPhj4_fS9gX1=w200" alt="Giga Bulletin logo" width="46" height="46"></a>
+<button class="nav-arrow nav-prev" type="button" aria-label="Previous navigation items" title="Previous"><span>‹</span></button>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="gigaNavLinks" aria-label="Open navigation"><i></i><i></i><i></i></button>
+<button class="nav-backdrop" type="button" aria-label="Close navigation"></button>
+<div class="nav-links" id="gigaNavLinks" aria-label="Main menu"><div class="nav-drawer-head"><button class="nav-drawer-close" type="button" aria-label="Close navigation">×</button></div>
+<a href="/">Home</a>
+<a href="/giga-bulletin/">Giga Bulletin</a>
+<a href="/giga-journal/">Giga Journal</a>
+<a href="/giga-flow/">Giga Flow</a>
+<a href="/giga-translation/">Giga Translation</a>
+<a href="/giga-poetry-ground/">Giga Poetry Ground</a>
+<a href="/magazine-and-books/">Magazine and Books</a>
+<a href="/giga-canvas/">Giga Canvas</a>
+<a href="/contribute-to-giga/">Contribute to Giga</a>
+<a href="/feedback-for-giga/">Feedback for Giga</a>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/cookie-policy/">Cookie Policy</a>
+<a href="/contact-us/">Contact Us</a>
+<a href="/faq/">FAQ</a>
+</div>
+<button class="nav-arrow nav-next" type="button" aria-label="Next navigation items" title="Next"><span>›</span></button>
+</nav>
+
+<div class="page-title"><div class="page-bg" id="titleBg"></div><span>অন্যান্য বই এবং ম্যাগাজিন</span></div>
+
+<div class="led-marquee-wrapper">
+  <div class="led-marquee-track">
+    <span>অসংখ্য বইয়ের বাজার বনাম কয়েকটি সুস্বাদু বইয়ের খোঁজ;— ভালো বই পড়ুন, সুস্থ চর্চা করুন, নিজেকে জাগিয়ে রাখুন... ★</span>
+    <span>অসংখ্য বইয়ের বাজার বনাম কয়েকটি সুস্বাদু বইয়ের খোঁজ;— ভালো বই পড়ুন, সুস্থ চর্চা করুন, নিজেকে জাগিয়ে রাখুন... ★</span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- 1. Ashis Saha feature block -->
+  <a class="feature" id="feature" href="https://www.gigabulletin.in/the-works-of-ashis-saha" target="_blank" rel="noopener noreferrer">
+    <span class="liquid"><span class="l1"></span><span class="l2"></span><span class="l3"></span><img id="featImg" alt="আশীষ সাহা ।। নির্বাচিত বিচ্যুতি" decoding="async"></span>
+    <span class="sub" id="sub">আশীষ সাহার অসংখ্য হাসির অনুভূতি-থেকে কিছু নির্বাচিত উজ্জ্বলতা</span>
+  </a>
+
+  <!-- 2. PDF card is built by the script (fixed position) -->
+  <div id="pdfSlot"></div>
+
+  <!-- 3. Books, one by one -->
+  <div class="books" id="booksList"></div>
+
+</main>
+
+<!-- ============ CONTRIBUTE POPUP ============ -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-box">
+    <button class="popup-close" id="popupClose">✕</button>
+    <div class="popup-title">আপনার দৈনন্দিন ব্যয়ের সামান্য মূল্য গিগা বুলেটিনে কন্ট্রিবিউট করুন, আপনার সামান্য অনুদান আমাদের উদ্যোগটিকে এগিয়ে নিয়ে যেতে সাহায্য করবে, অশেষ ধন্যবাদ— </div>
+    <a class="popup-btn" href="https://www.gigabulletin.in/contribute-to-giga" target="_blank">Contribute</a>
+  </div>
+</div>
+
+<!-- ============ TICKER (links are built by the script) ============ -->
+<div class="ticker-wrapper" id="tickerWrapper">
+  <div class="ticker" id="ticker"></div>
+</div>
+
+
+
+
+<script src="Script/script.js" defer></script>
+<script src="/Navigation/navigation.js" defer></script>
+</body>
+</html>

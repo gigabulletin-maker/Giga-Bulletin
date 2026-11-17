@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GIGA Canvas</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="Style/style.css">
+<link rel="stylesheet" href="/Navigation/navigation.css">
+</head>
+<body>
+<nav aria-label="Giga main navigation" class="giga-nav" id="gigaNavigation">
+<a class="nav-logo" href="/" aria-label="Giga Bulletin home"><img src="https://lh3.googleusercontent.com/d/1wb2WC5Co9J8RjmLUKGZqTPhj4_fS9gX1=w200" alt="Giga Bulletin logo" width="46" height="46"></a>
+<button class="nav-arrow nav-prev" type="button" aria-label="Previous navigation items" title="Previous"><span>‹</span></button>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="gigaNavLinks" aria-label="Open navigation"><i></i><i></i><i></i></button>
+<button class="nav-backdrop" type="button" aria-label="Close navigation"></button>
+<div class="nav-links" id="gigaNavLinks" aria-label="Main menu"><div class="nav-drawer-head"><button class="nav-drawer-close" type="button" aria-label="Close navigation">×</button></div>
+<a href="/">Home</a>
+<a href="/giga-bulletin/">Giga Bulletin</a>
+<a href="/giga-journal/">Giga Journal</a>
+<a href="/giga-flow/">Giga Flow</a>
+<a href="/giga-translation/">Giga Translation</a>
+<a href="/giga-poetry-ground/">Giga Poetry Ground</a>
+<a href="/magazine-and-books/">Magazine and Books</a>
+<a href="/giga-canvas/">Giga Canvas</a>
+<a href="/contribute-to-giga/">Contribute to Giga</a>
+<a href="/feedback-for-giga/">Feedback for Giga</a>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/cookie-policy/">Cookie Policy</a>
+<a href="/contact-us/">Contact Us</a>
+<a href="/faq/">FAQ</a>
+</div>
+<button class="nav-arrow nav-next" type="button" aria-label="Next navigation items" title="Next"><span>›</span></button>
+</nav>
+
+<header>
+  <h1>GIGA Canvas</h1>
+  <div class="tag">
+    <span class="rw">ঘি জি মি জি স ভ্য তা র প্র তি টি আঁ চ ড়</span>
+    <span>আঁকুন লিখুন চিন্তাশীল নিজের গতিপথ</span>
+  </div>
+</header>
+
+<div class="app">
+  <div id="bar">
+    <div class="cap">তুলি ও ক্যানভাস</div>
+    <div class="row">
+      <div class="group">🖌️
+        <select id="brush">
+          <option selected>ইঙ্ক পেন</option><option>সাধারণ পেন</option><option>পেনসিল</option>
+          <option>শুকনো তুলি</option><option>ভেজা তুলি</option>
+          <option>তেলরঙ</option><option>প্যালেট নাইফ</option>
+          <option>চক</option><option>মিক্সার</option>
+          <option>স্পঞ্জ</option><option>স্প্রে</option><option>সলিড রঙ</option><option>ইরেজার</option>
+        </select>
+      </div>
+      <div class="group">🖼️
+        <select id="ratio">
+          <option value="1:1" selected>১ঃ১</option><option value="4:5">৪ঃ৫</option>
+          <option value="5:4">৫ঃ৪</option><option value="9:16">৯ঃ১৬</option><option value="16:9">১৬ঃ৯</option>
+        </select>
+      </div>
+    </div>
+    <div class="cap">আকার</div>
+    <div class="row"><div class="group">📏<input id="size" type="range" min="1" max="600" value="60"></div></div>
+    <div class="cap">কাজ ও রঙ</div>
+    <div class="row">
+      <div class="group"><button id="undo">↩️</button></div>
+      <div class="group"><button id="redo">↪️</button></div>
+      <div class="group"><button id="clear">❌</button></div>
+      <div class="group"><input id="color" type="color" value="#000000"><button id="colorToggle" aria-label="Open advanced color palette" aria-haspopup="dialog"><span class="colorButtonSwatch" aria-hidden="true"></span><span>রঙ</span><span class="colorButtonArrow" aria-hidden="true">▾</span></button></div>
+      <div class="group"><button id="download">📥</button></div>
+    </div>
+  </div>
+
+  <div id="workspace">
+    <canvas id="cv"></canvas>
+    <div id="zoomLabel">100%</div>
+  </div>
+</div>
+
+<div id="reminderToast">ডাউনলোড করে পাঠিয়ে দিন <a href="mailto:gigabulletin@gmail.com">gigabulletin@gmail.com</a></div>
+<div id="downloadToast">পাঠিয়ে দিন<br><a href="mailto:gigabulletin@gmail.com">gigabulletin@gmail.com</a></div>
+
+<footer class="contribute">
+  <a class="give" href="https://www.gigabulletin.in/contribute-to-giga" target="_blank" rel="noopener noreferrer" aria-label="Contribute to GIGA">
+    <span class="badge">
+      <svg class="orbit" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="orb" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+        <text><textPath href="#orb" textLength="500">CONTRIBUTE TO GIGA • CONTRIBUTE TO GIGA •</textPath></text>
+      </svg>
+      <span class="core"><b>↗</b></span>
+    </span>
+    <span class="give-t">Contribute to GIGA</span>
+  </a>
+</footer>
+
+<dialog id="colorPicker" aria-label="Advanced color palette">
+  <div class="pickerHeading"><strong>Color palette</strong><button id="closeColors" aria-label="Close color palette">✕</button></div>
+  <div id="svPicker" tabindex="0" role="slider" aria-label="Saturation and brightness" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="svHandle"></span></div>
+  <input id="huePicker" type="range" min="0" max="360" value="0" aria-label="Hue">
+  <div class="colorPreviewRow"><div id="largeColorPreview"></div><span id="colorValue">#000000</span></div>
+  <div class="colorFields"><label>HEX<input id="hexColor" value="#000000" maxlength="7" spellcheck="false"></label><label>R<input id="redColor" type="number" min="0" max="255" value="0"></label><label>G<input id="greenColor" type="number" min="0" max="255" value="0"></label><label>B<input id="blueColor" type="number" min="0" max="255" value="0"></label></div>
+  <div id="colorError" role="status"></div>
+  <div class="colorSubhead">Artist colors</div><div id="presetColors" class="swatchGrid"></div>
+  <div class="colorSubhead">Recent colors</div><div id="recentColors" class="swatchGrid"></div>
+  <div class="colorSubhead">My colors<button id="saveColor">+ Save color</button></div><div id="savedColors" class="swatchGrid"></div>
+</dialog>
+
+
+<script src="Script/script.js" defer></script>
+<script src="/Navigation/navigation.js" defer></script>
+</body>
+</html>
