@@ -57,3 +57,46 @@
 #gigaNavigation.giga-nav-scrolled{background:rgba(16,17,20,.19);-webkit-backdrop-filter:blur(26px) saturate(1.45);backdrop-filter:blur(26px) saturate(1.45);border-bottom-color:rgba(255,255,255,.23);box-shadow:0 5px 22px rgba(0,0,0,.08)}
 @media(max-width:760px){#gigaNavigation.giga-nav-scrolled{background:rgba(20,21,24,.14)}#gigaNavigation.giga-nav-scrolled .nav-logo,#gigaNavigation.giga-nav-scrolled .nav-toggle{visibility:visible;opacity:1}}
 @media(prefers-reduced-motion:reduce){#gigaNavigation{transition:none}}
+
+/* Mobile-only rhythmic stagger: menu items enter individually from the right.
+   Keep the established drawer, glass effect, links and close behavior unchanged. */
+@media(max-width:760px){
+ body>#gigaNavLinks>a{
+   opacity:0;
+   transform:translate3d(28px,0,0);
+   transition:none;
+   will-change:opacity,transform;
+ }
+ body.giga-menu-open>#gigaNavLinks>a{
+   opacity:0;
+   transform:translate3d(28px,0,0);
+   animation:giga-menu-rhythm .42s cubic-bezier(.22,1,.36,1) both;
+   animation-delay:calc((var(--giga-menu-order,0) * 58ms) + 110ms);
+ }
+ body>#gigaNavLinks>a:nth-of-type(1){--giga-menu-order:0}
+ body>#gigaNavLinks>a:nth-of-type(2){--giga-menu-order:1}
+ body>#gigaNavLinks>a:nth-of-type(3){--giga-menu-order:2}
+ body>#gigaNavLinks>a:nth-of-type(4){--giga-menu-order:3}
+ body>#gigaNavLinks>a:nth-of-type(5){--giga-menu-order:4}
+ body>#gigaNavLinks>a:nth-of-type(6){--giga-menu-order:5}
+ body>#gigaNavLinks>a:nth-of-type(7){--giga-menu-order:6}
+ body>#gigaNavLinks>a:nth-of-type(8){--giga-menu-order:7}
+ body>#gigaNavLinks>a:nth-of-type(9){--giga-menu-order:8}
+ body>#gigaNavLinks>a:nth-of-type(10){--giga-menu-order:9}
+ body>#gigaNavLinks>a:nth-of-type(11){--giga-menu-order:10}
+ body>#gigaNavLinks>a:nth-of-type(12){--giga-menu-order:11}
+ body>#gigaNavLinks>a:nth-of-type(13){--giga-menu-order:12}
+ body>#gigaNavLinks>a:nth-of-type(14){--giga-menu-order:13}
+}
+@keyframes giga-menu-rhythm{
+  0%{opacity:0;transform:translate3d(28px,0,0)}
+  65%{opacity:1}
+  100%{opacity:1;transform:translate3d(0,0,0)}
+}
+@media(max-width:760px) and (prefers-reduced-motion:reduce){
+ body.giga-menu-open>#gigaNavLinks>a{
+   animation:none;
+   opacity:1;
+   transform:none;
+ }
+}
