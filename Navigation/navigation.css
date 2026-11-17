@@ -43,3 +43,11 @@
  body>#gigaNavLinks>a{background:rgba(255,255,255,.045)!important}
  body>#gigaNavLinks .nav-drawer-close{min-width:44px;min-height:44px;touch-action:manipulation}
 }
+
+/* Keep drawer header hidden on desktop; style portal backdrop after moving to body. */
+#gigaNavigation .nav-drawer-head{display:none}
+@media(max-width:760px){
+ body>#gigaNavigationBackdrop{display:block;position:fixed;inset:0;width:100vw;height:100dvh;border:0;background:rgba(0,0,0,.22);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s,visibility .3s}
+ body.giga-menu-open>#gigaNavigationBackdrop{opacity:1;visibility:visible;pointer-events:auto}
+ body>#gigaNavLinks .nav-drawer-head{display:flex}
+}
