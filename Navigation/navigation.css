@@ -51,3 +51,9 @@
  body.giga-menu-open>#gigaNavigationBackdrop{opacity:1;visibility:visible;pointer-events:auto}
  body>#gigaNavLinks .nav-drawer-head{display:flex}
 }
+
+/* Frosted glass when the document is scrolled; retain logo and menu controls. */
+#gigaNavigation{transition:background-color .28s ease,box-shadow .28s ease,border-color .28s ease}
+#gigaNavigation.giga-nav-scrolled{background:rgba(16,17,20,.19);-webkit-backdrop-filter:blur(26px) saturate(1.45);backdrop-filter:blur(26px) saturate(1.45);border-bottom-color:rgba(255,255,255,.23);box-shadow:0 5px 22px rgba(0,0,0,.08)}
+@media(max-width:760px){#gigaNavigation.giga-nav-scrolled{background:rgba(20,21,24,.14)}#gigaNavigation.giga-nav-scrolled .nav-logo,#gigaNavigation.giga-nav-scrolled .nav-toggle{visibility:visible;opacity:1}}
+@media(prefers-reduced-motion:reduce){#gigaNavigation{transition:none}}
