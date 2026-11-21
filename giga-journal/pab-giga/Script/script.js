@@ -1,0 +1,1 @@
+document.querySelectorAll('a[href$="/index.html"]').forEach(a=>{a.setAttribute('data-folder-link','true')});
