@@ -1,0 +1,1 @@
+document.documentElement.dataset.page='comics-2';
