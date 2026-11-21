@@ -23,7 +23,7 @@
       title: [
         { text: "পুনরায় আলোর বৃশ্চিক", cls: "iw-3" }
       ],
-      link: "https://www.gigabulletin.in/pab-giga"
+      link: "/giga-journal/pab-giga/"
     }
   ];
 
@@ -51,7 +51,7 @@
     },
     {
       driveId: "1we5M1uThIBZpriWc5n3mY6H5YGmFRBB7",
-      link: "https://www.gigabulletin.in/pab-giga",
+      link: "/giga-journal/pab-giga/",
       words: [
         { text: "পুনরায়",  cls: "w-silverred" },
         { text: "আলোর",    cls: "w-red" },
