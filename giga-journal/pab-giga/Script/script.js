@@ -1,4 +1,3 @@
-
 const B='/giga-journal/pab-giga/',D='https://lh3.googleusercontent.com/d/';
 /* I(title, author, content, category): content = poem/prose text, a link (http...), or an array of image ids */
 const I=(t,a,x,c)=>({t,a,x,c});
